@@ -1,7 +1,6 @@
 # Elaine Azul
 
 eazul@uw.edu
-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
 
 # Objective
 
