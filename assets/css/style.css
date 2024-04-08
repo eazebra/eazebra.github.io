@@ -284,6 +284,13 @@ h6,
   padding-top: 10px;
 }
 
+.left-aligned-section {
+  margin-left: 0;
+  padding-left: 15px; /* or adjust based on your design needs */
+}
+
+
+
 /* Contact Form */
 .php-email-form .error-message {
   display: none;
@@ -335,6 +342,39 @@ h6,
     transform: rotate(360deg);
   }
 }
+
+.connect-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjusts the space between icons */
+}
+
+.connect-icon {
+  color: #333; /* Icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s;
+}
+
+.connect-icon:hover {
+  color: #007bff; /* Icon hover color */
+}
+
+.connect-info i {
+  color: #333; /* Icon color */
+  font-size: 24px; /* Icon size */
+}
+
+.connect-info p {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 
 /*--------------------------------------------------------------
 # Header
