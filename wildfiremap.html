@@ -67,33 +67,33 @@
         <!-- <div style="max-width: 700px;">
             <canvas id="myChart"></canvas>
         </div> -->
-        <div class="description">This map displays the number of wildfires in Washington State from 1973-2022, allowing you to choose a year and view wildfire information from that specific year. </div>
+        <div class="description">This map displays the number of wildfires in Washington State from 1973-2022, with a slider to view wildfire progression throughout time. </div>
         <div id="legend">
             <strong>Wildfire Size (Acres)</strong>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #fee5d9;"></div>
+                <div class="legend-color" style="background-color: #ffffff;"></div>
                 0 - 1,000
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #fcbba1;"></div>
+                <div class="legend-color" style="background-color: #fff5c3;"></div>
                 1,000 - 5,000
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #fc9272;"></div>
+                <div class="legend-color" style="background-color: #ffd700;"></div>
                 5,000 - 10,000
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #fb6a4a;"></div>
+                <div class="legend-color" style="background-color: #ff4500;"></div>
                 10,000 - 25,000
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #de2d26;"></div>
+                <div class="legend-color" style="background-color: #ff0000;"></div>
                 25,000 - 50,000
             </div>
             <div class="legend-item">
-                <div class="legend-color" style="background-color: #a50f15;"></div>
+                <div class="legend-color" style="background-color: #b22222;"></div>
                 50,000+
-            </div>
+            </div>            
         </div>
         
         
@@ -123,16 +123,17 @@
                 source: 'wildfires',
                 paint: {
                     'fill-color': [
-                        'interpolate',
-                        ['linear'],
-                        ['get', 'ACRES'],
-                        0, '#fee5d9',
-                        1000, '#fcbba1',
-                        5000, '#fc9272',
-                        10000, '#fb6a4a',
-                        25000, '#de2d26',
-                        50000, '#a50f15'
-                    ],
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'ACRES'],
+                    0, '#ffffff',     // White for the lowest value
+                    1000, '#fff5c3',  // Light yellow for 1,000
+                    5000, '#ffd700',  // Bold yellow for 5,000
+                    10000, '#ff4500', // Light red for 10,000
+                    25000, '#ff0000', // Vivid red for 25,000
+                    50000, '#b22222'  // Dark red for 50,000+
+                ],
+
                     'fill-opacity': 0.7
                 }
             });
